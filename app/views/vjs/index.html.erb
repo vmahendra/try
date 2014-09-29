@@ -1,0 +1,47 @@
+<h1>Listing vjs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Report</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sai.each do |vj| %>
+  <tr>
+    <td><%= vj.name %></td>
+
+<hr>
+<%= params.inspect%>
+<hr>
+
+
+    <td><%= vj.age %></td>
+    <td><%= image_tag vj.photo ,:height => 20,:id => "d" ,:onclick => "s()"%></td>
+    <td><%= link_to 'Show', vj %></td>
+    <td><%= link_to 'Edit', edit_vj_path(vj) %></td>
+    <td><%= link_to 'Destroy', vj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<p style="color:red">ssss</p>
+<%= link_to 'New Vj', new_vj_path %>
+
+<% Time.now.strftime("%S")%>
+
+<hr>
+
+<p id="d" onclick="f()">sssssssss</p>
+
+<script type="text/javascript">
+ function s (argument) {
+   // body...
+document.getElementById('d').height = 89
+ }
+ 
+</script>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @vj.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @vj.age %>
+</p>
+
+<p>
+  <b>Report:</b>
+  <%= image_tag @vj.photo,:height=>50, :id=>'demo',:onclick => "s()" %>
+</p>
+
+<p id="demo" onclick="s()">ssssssssssssss</p>
+<%= link_to 'Edit', edit_vj_path(@vj) %> |
+<%= link_to 'Back', vjs_path %>
+
+<script type="text/javascript">
+
+ 
+
+document.getElementById('demo').style.color = 'red'
+
+
+
+</script>
